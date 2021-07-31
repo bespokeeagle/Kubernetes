@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myfirstdeployment
+  labels: 
+    env: test
+
+spec:
+  template:
+    metadata:
+      name: mynginx
+      labels:
+        name: mynginx
+        tier: backend
+    spec:
+      containers:
+        -
+          name: nginx
+          image: nginx
+  selector: 
+    matchLabels:
+      name: mynginx
+      tier: backend
+  replicas: 3
