@@ -1,11 +1,17 @@
+#compusolry field apiversion
 apiVersion: v1
+#compusolry field of defintion
 kind: Pod
+#compusolry field information and LABELS about definition a dictionary
 metadata:
   name: mynginx
+#labels a dictionary any key values you wish
   labels:
     name: mynginx
     tier: backend
+#compusolry field specifications for defintion
 spec:
+#specifiy container name and image a list
   containers:
     -
       name: nginx
