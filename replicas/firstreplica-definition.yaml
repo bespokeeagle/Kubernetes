@@ -1,11 +1,16 @@
+#compusolry field apiversion
 apiVersion: apps/v1
+#compusolry field of defintion
 kind: ReplicaSet
+#compusolry field information and LABELS about definition a dictionary
 metadata:
   name: myfirstreplica
+#labels a dictionary any key values you wish
   labels: 
     env: test
-
+#compusolry field specifications for defintion
 spec:
+#compusolry field specification about the pod for this replica
   template:
     metadata:
       name: mynginx
@@ -17,8 +22,11 @@ spec:
         -
           name: nginx
           image: nginx
+#compusolry field specifications selecting pods considered for replication using LABELS must match pod LABEL
   selector: 
+#label field
     matchLabels:
       name: mynginx
       tier: backend
+#number of replicas
   replicas: 3
