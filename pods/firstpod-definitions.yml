@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mynginx
+  labels:
+    name: mynginx
+    tier: backend
+spec:
+  containers:
+    -
+      name: nginx
+      image: nginx
