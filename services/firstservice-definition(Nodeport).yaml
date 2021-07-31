@@ -1,12 +1,19 @@
+#compusolry field apiversion
 apiVersion: v1
+#compusolry field of defintion
 kind: Service
+#compusolry field information and LABELS about definition a dictionary
 metadata: 
   name: myfirstservice
+#compusolry field specifications for defintion
 spec:
+#specify type of service
   type: NodePort
+#specify ports 
   ports:
     - port: 80
       targetPort: 80
       nodePort: 30008
+  #compusolry field specifications selecting pods considered for replication using LABELS must match pod LABEL
   selector:
     name: mynginx
